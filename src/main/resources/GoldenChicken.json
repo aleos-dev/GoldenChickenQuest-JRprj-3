@@ -1,0 +1,254 @@
+  {
+    "title": "The Great Trophy Quest",
+    "story": "The village is in disarray; the prized Chicken Cup Trophy has gone missing on the eve of the Great Fowl Fair! As the local detective, you've been summoned to uncover this peculiar poultry predicament.",
+    "decisions": {
+      "root": {
+        "prompt": "Where will you start your investigation?",
+        "options": [
+          {
+            "title": "The Royal Chicken Coop",
+            "story": "The chickens cluck and strut around, one of them shares, 'Did you hear about the grain prices? Simply clucking-tastic!'",
+            "next": "royal-chicken-coop"
+          },
+          {
+            "title": "The Blacksmith's Forge",
+            "story": "The Blacksmith, with feathers in his beard, chuckles, 'Looking for the trophy? I can't help with that, but how about this shiny spoon? Almost the same thing, right?'",
+            "next": "blacksmith-forge"
+          },
+          {
+            "title": "The Mysterious Forest",
+            "story": "As you venture deep into the forest, you stumble upon a shiny rock. 'Hmm, not quite the trophy, but shiny nonetheless!' you think.",
+            "next": "mysterious-forest"
+          }
+        ]
+      },
+      "royal-chicken-coop": {
+        "prompt": "Inside the Royal Chicken Coop, you are surrounded by an array of aristocratic hens and roosters. What will you do?",
+        "options": [
+          {
+            "title": "Interview the Rooster-in-Chief",
+            "story": "Rooster-in-Chief ruffles his feathers and proclaims, 'A trophy? My comb itches more than this concerns me. But check the hay loft; strange cluckings have been heard from up there.'",
+            "next": "hay-loft"
+          },
+          {
+            "title": "Search the Nesting Boxes",
+            "story": "You sift through feathers and eggs. A hen squawks, 'Careful, dear, those are this morning's batch!' Beneath a particularly plump hen, you find a trail of suspiciously shiny feathers.",
+            "next": "nesting-boxes"
+          },
+          {
+            "title": "Inspect the Grain Storage",
+            "story": "The grain silo is quieter than the coop. As you dig through the grain, you uncover a trail of footprints leading outside. 'Curious,' you muse, 'Very curious indeed!'",
+            "next": "grain-storage"
+          }
+        ]
+      },
+      "hay-loft": {
+        "prompt": "The hay loft is dim and dusty. A faint glint catches your eye from a corner.",
+        "options": [
+          {
+            "title": "Investigate the Shiny Object",
+            "story": "Pushing aside bales of hay reveals a golden gleam. It's a gilded egg! 'Interesting,' you ponder, 'but not the trophy I'm after.'",
+            "next": "gilded-egg"
+          },
+          {
+            "title": "Listen for Cluckings",
+            "story": "You hold still, and the cluckings lead you to a secret hatch. With a creak, it swings open to reveal a ladder descending into darkness.",
+            "next": "secret-hatch"
+          }
+        ]
+      },
+      "nesting-boxes": {
+        "prompt": "You carefully check the nesting boxes.",
+        "options": [
+          {
+            "title": "Lift the plump hen",
+            "story": "The hen clucks indignantly but under her, you find a key with a feather emblem. 'This must be important,' you think.",
+            "next": "find-key"
+          }
+        ]
+      },
+      "grain-storage": {
+        "prompt": "The trail of footprints in the grain storage piques your interest.",
+        "options": [
+          {
+            "title": "Follow the footprints",
+            "story": "The footprints lead to a small, feather-covered locket. Inside is a picture of Lady Hennington!",
+            "next": "find-locket"
+          }
+        ]
+      },
+      "gilded-egg": {
+        "prompt": "The gilded egg is intriguing but not the end of your search.",
+        "options": [
+          {
+            "title": "Examine the egg further",
+            "story": "The egg cracks open to reveal a note: 'The trophy's fate lies with the Lady of the Coop.'",
+            "next": "note-from-egg"
+          }
+        ]
+      },
+      "secret-hatch": {
+        "prompt": "The secret hatch may hold answers.",
+        "options": [
+          {
+            "title": "Descend the ladder",
+            "story": "You climb down to discover a hidden chamber, where Lady Hennington sits, practicing her speech with a chicken statue that looks suspiciously like the trophy.",
+            "next": "lady-hennington"
+          }
+        ]
+      },
+      "find-key": {
+        "prompt": "The key leads you to a locked diary in Lady Hennington's quarters.",
+        "options": [
+          {
+            "title": "Unlock the diary",
+            "story": "The diary reveals that Lady Hennington needed the trophy to ensure her speech would be perfect. She never meant for it to go this far.",
+            "next": "diary-confession"
+          }
+        ]
+      },
+      "find-locket": {
+        "prompt": "The locket's contents are a clue to the trophy's whereabouts.",
+        "options": [
+          {
+            "title": "Confront Lady Hennington",
+            "story": "Lady Hennington gasps upon seeing the locket, 'I must come clean! The trophy was in my possession all along for a speech rehearsal!'",
+            "next": "lady-confesses"
+          }
+        ]
+      },
+      "note-from-egg": {
+        "prompt": "The note has set the stage for a revelation.",
+        "options": [
+          {
+            "title": "Go to Lady Hennington",
+            "story": "You find Lady Hennington with a faux trophy, rehearsing her speech. 'I needed to feel like a winner,' she admits sheepishly.",
+            "next": "lady-rehearsal"
+          }
+        ]
+      },
+      "lady-hennington": {
+        "prompt": "You've found Lady Hennington with the statue.",
+        "options": [
+          {
+            "title": "Question her",
+            "story": "She confesses, 'I borrowed the trophy for confidence. It was foolish, I know. Let's return it together.'",
+            "next": "return-trophy"
+          }
+        ]
+      },
+      "diary-confession": {
+        "prompt": "The diary has unlocked the truth.",
+        "options": [
+          {
+            "title": "Bring the diary to the villagers",
+            "story": "The villagers read the diary, and Lady Hennington steps forward, ashamed, ready to make amends for the chaos she caused.",
+            "next": "villagers-forgive"
+          }
+        ]
+      },
+      "lady-confesses": {
+        "prompt": "Lady Hennington's admission brings the search to an end.",
+        "options": [
+          {
+            "title": "Retrieve the trophy",
+            "story": "With a sigh of relief, Lady Hennington hands over the trophy, and you assure her that her speech will be great without gimmicks.",
+            "next": "trophy-recovered"
+          }
+        ]
+      },
+      "lady-rehearsal": {
+        "prompt": "The rehearsal leads to a heartfelt confession.",
+        "options": [
+          {
+            "title": "Sympathize with Lady Hennington",
+            "story": "You empathize with her need to succeed and gently suggest using her own merit rather than the trophy's luck.",
+            "next": "trophy-returned"
+          }
+        ]
+      },
+      "return-trophy": {
+        "prompt": "Returning the trophy restores harmony.",
+        "options": [
+          {
+            "title": "Announce the good news",
+            "story": "Together with Lady Hennington, you announce the trophy's return at the village gathering, to cheers and relief.",
+            "next": "celebration"
+          }
+        ]
+      },
+      "villagers-forgive": {
+        "prompt": "The villagers show understanding and forgiveness.",
+        "options": [
+          {
+            "title": "Celebrate the resolution",
+            "story": "The air is filled with a sense of unity as the villagers decide to celebrate the trophy's return and Lady Hennington's honesty.",
+            "next": "feast"
+          }
+        ]
+      },
+      "trophy-recovered": {
+        "prompt": "With the trophy recovered, peace is restored.",
+        "options": [
+          {
+            "title": "Plan a trophy ceremony",
+            "story": "The villagers decide to hold a ceremony to place the trophy back in its rightful spot, with Lady Hennington as the guest of honor.",
+            "next": "ceremony-preparations"
+          }
+        ]
+      },
+      "trophy-returned": {
+        "prompt": "The trophy's return marks a new chapter.",
+        "options": [
+          {
+            "title": "Begin a new tradition",
+            "story": "Inspired by recent events, the village starts a new tradition where every year, a 'villager of honor' is chosen to hold the trophy for a day.",
+            "next": "new-tradition"
+          }
+        ]
+      },
+      "celebration": {
+        "prompt": "The village rejoices with a grand celebration.",
+        "options": [
+          {
+            "title": "Join in the festivities",
+            "story": "Music, dance, and a sense of togetherness fill the air as the village celebrates not just the trophy's return, but also the spirit of community.",
+            "next": "end"
+          }
+        ]
+      },
+      "feast": {
+        "prompt": "A feast is held in the village square.",
+        "options": [
+          {
+            "title": "Feast with the villagers",
+            "story": "Tables are laden with food as the villagers gather to feast, forgiving Lady Hennington and celebrating the end of the mystery.",
+            "next": "end"
+          }
+        ]
+      },
+      "ceremony-preparations": {
+        "prompt": "The ceremony preparations bring everyone together.",
+        "options": [
+          {
+            "title": "Assist with the preparations",
+            "story": "You help set up the stage and decorations, ensuring that the ceremony is a testament to the village's resilience and unity.",
+            "next": "end"
+          }
+        ]
+      },
+      "new-tradition": {
+        "prompt": "A new tradition fosters community pride.",
+        "options": [
+          {
+            "title": "Celebrate the first honoree",
+            "story": "Lady Hennington, in a twist of fate, becomes the first honoree, her speech touching every heart in the audience.",
+            "next": "end"
+          }
+        ]
+      },
+      "end": {
+        "prompt": "The adventure concludes with the village stronger and more united than ever, the trophy shining brightly, symbolizing not just victory, but the heart of the community."
+      }
+    }
+  }

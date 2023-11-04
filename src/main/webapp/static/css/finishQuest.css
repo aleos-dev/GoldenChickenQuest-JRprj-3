@@ -1,0 +1,51 @@
+/* Finish Page Styles */
+.finish-container {
+    text-align: center; /* Centers the content */
+    padding: 50px 20px;
+    background: #f8f9fa; /* Light background color */
+}
+
+.finish-header {
+    color: #333; /* Darker font color for contrast */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.finish-message {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.finish-button {
+    padding: 12px 30px;
+    font-size: 1em;
+    background-color: #28a745; /* Success green color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px #888888;
+    transition: 0.3s;
+}
+
+.finish-button:hover {
+    background-color: #218838; /* A darker green on hover */
+    transform: translateY(-3px); /* Moves button up slightly */
+}
+
+.finish-image {
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+/* If there is a specific ID or class you want styled, include it here */
+#finishButton {
+    position: relative; /* Adjust as needed */
+    transition: transform 0.3s;
+}
+
+/* Add any additional specific styles below */
+/* ... */

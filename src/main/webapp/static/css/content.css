@@ -1,0 +1,7 @@
+.content {
+    border: 5px double #704214;
+    padding: 30px;
+    background-color: #fffaf0; /* Slight ivory color */
+    box-shadow: 5px 5px 10px #8c8c8c;
+    display: inline-block;
+}

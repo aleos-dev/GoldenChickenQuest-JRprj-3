@@ -1,0 +1,113 @@
+.story-section {
+    background: #eaecef; /* Slight contrast to draw attention */
+    padding: 20px;
+    margin-bottom: 30px; /* Spacing between story section and path options */
+    border-radius: 4px; /* Consistent rounding with other elements */
+}
+
+.story-section h2 {
+    color: #2a9d8f; /* Tie in with other accent colors */
+    margin-bottom: 10px;
+}
+
+.story-section p {
+    color: #333; /* Readable text color for the story */
+}
+
+/* Style the quest-container for overall layout */
+.quest-container {
+    max-width: 800px;
+    margin: 0 auto; /* Centers the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+
+    padding: 10px;
+    background-color: #fffaf0; /* Slight ivory color */
+    box-shadow: 5px 5px 10px #8c8c8c;
+    display: inline-block;
+
+}
+
+/* Style the header within the quest-container */
+.options-header h3 {
+    color: #333; /* Dark text for the heading */
+    margin-bottom: 10px;
+}
+
+.options-header p {
+    color: #666; /* Lighter text for the subheading */
+    margin-bottom: 20px;
+}
+
+
+.player-name {
+    color: #2a9d8f; /* Give the player's name a unique color */
+}
+
+/* Style the options for the paths */
+.path-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* Creates space between the path options */
+}
+
+.path {
+    background: white;
+    border: 1px solid #ddd; /* Subtle border for each path */
+    border-radius: 4px;
+    padding: 20px;
+    width: 30%; /* Each path takes up roughly a third of the container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.path h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.path p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.path button {
+    background-color: #2a9d8f; /* Example button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.path button:hover {
+    background-color: #228f7b; /* Darken button color on hover */
+}
+
+/* Return button at the bottom */
+.return-button {
+    background-color: #f4a261; /* A contrasting color for the return button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 30px; /* Separates the return button from path options */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+    background-color: #e89a53; /* Darken button color on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .path-options {
+        flex-direction: column;
+    }
+
+    .path {
+        width: auto; /* Path containers take full width on smaller screens */
+        margin-bottom: 20px; /* Add space between vertically stacked paths */
+    }
+}
+
