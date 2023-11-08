@@ -1,0 +1,26 @@
+  {
+    "title": "The Great Trophy Quest",
+    "story": "The village is in disarray; the prized Chicken Cup Trophy has gone missing on the eve of the Great Fowl Fair! As the local detective, you've been summoned to uncover this peculiar poultry predicament.",
+    "decisions": {
+      "root": {
+        "prompt": "Where will you start your investigation?",
+        "options": [
+          {
+            "title": "The Royal Chicken Coop",
+            "story": "The chickens cluck and strut around, one of them shares, 'Did you hear about the grain prices? Simply clucking-tastic!'",
+            "next": "royal-chicken-coop"
+          },
+          {
+            "title": "The Blacksmith's Forge",
+            "story": "The Blacksmith, with feathers in his beard, chuckles, 'Looking for the trophy? I can't help with that, but how about this shiny spoon? Almost the same thing, right?'",
+            "next": "blacksmith-forge"
+          },
+          {
+            "title": "The Mysterious Forest",
+            "story": "As you venture deep into the forest, you stumble upon a shiny rock. 'Hmm, not quite the trophy, but shiny nonetheless!' you think.",
+            "next": "mysterious-forest"
+          }
+        ]
+      }
+    }
+  }

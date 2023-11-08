@@ -25,22 +25,21 @@
         <div class="story-section">
             <h2><c:out value="${title}"/></h2>
             <p id="current-quest-story"><c:out value="${story}"/></p>
-        </div>
-
-        <div class="options-header">
+            <h4>Your next decision?</h4>
             <p>${questService.getPrompt(decision)}</p>
-            <h5>Make your choice!</h5>
         </div>
 
         <div class="path-options">
 
-            <c:forEach var="option" items="${questService.getOptions(sessionScope.decision)}" varStatus="status">
+            <c:forEach var="option" items="${questService.getOptions(sessionScope.decision)}"
+                       varStatus="status">
                 <div class="path" id="${questService.getNextKey(option)}">
                     <h2><c:out value="${questService.getTitle(option)}"/></h2>
                     <p><c:out value="${questService.getStory(option)}"/></p>
                     <form action="questLogic" method="post">
                         <input type="hidden" name="choiceIndex" value="${status.index}">
-                        <button type="submit"><c:out value="${questService.getTitle(option)}"/></button>
+                        <button type="submit"><c:out
+                                value="${questService.getTitle(option)}"/></button>
                     </form>
                 </div>
             </c:forEach>

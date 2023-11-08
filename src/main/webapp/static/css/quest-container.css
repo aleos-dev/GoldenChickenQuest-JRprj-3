@@ -1,43 +1,64 @@
 .story-section {
-    background: #eaecef; /* Slight contrast to draw attention */
+    /*background: #eaecef; !* Slight contrast to draw attention *!*/
+    background: rgba(234, 236, 239, 0.8); /* Ivory color with opacity */
     padding: 20px;
-    margin-bottom: 30px; /* Spacing between story section and path options */
+    margin-bottom: 1em; /* Spacing between story section and path options */
     border-radius: 4px; /* Consistent rounding with other elements */
 }
 
 .story-section h2 {
-    color: #2a9d8f; /* Tie in with other accent colors */
-    margin-bottom: 10px;
+    color: #2a9d8f;
+    margin-bottom: 1px;
+}
+.story-section h4 {
+    margin-top: 10px;
+    margin-bottom: 1px;
 }
 
 .story-section p {
     color: #333; /* Readable text color for the story */
+
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
-/* Style the quest-container for overall layout */
+
+
 .quest-container {
     max-width: 800px;
     margin: 0 auto; /* Centers the container */
     border-radius: 8px; /* Rounded corners for the container */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-
     padding: 10px;
     background-color: #fffaf0; /* Slight ivory color */
+    background-image: url('../images/mainBack.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
     box-shadow: 5px 5px 10px #8c8c8c;
     display: inline-block;
-
+    position: relative; /* Establishes a positioning context for pseudo-elements */
 }
 
-/* Style the header within the quest-container */
-.options-header h3 {
-    color: #333; /* Dark text for the heading */
-    margin-bottom: 10px;
+.quest-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 250, 240, 0.1); /* Ivory color with opacity */
+    border-radius: 8px; /* Rounded corners for the overlay */
+    z-index: 1; /* Make sure it's above the background image */
 }
 
-.options-header p {
-    color: #666; /* Lighter text for the subheading */
-    margin-bottom: 20px;
+/* Ensure all child elements are above the pseudo-element */
+.quest-container > * {
+    position: relative;
+    z-index: 2;
 }
+
 
 
 .player-name {
@@ -53,7 +74,7 @@
 }
 
 .path {
-    background: white;
+    background: rgba(255, 250, 240, 0.8); /* Ivory color with opacity */
     border: 1px solid #ddd; /* Subtle border for each path */
     border-radius: 4px;
     padding: 20px;
@@ -63,12 +84,13 @@
 
 .path h2 {
     color: #333;
-    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 .path p {
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .path button {
