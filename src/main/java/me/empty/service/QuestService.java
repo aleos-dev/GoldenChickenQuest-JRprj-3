@@ -2,10 +2,7 @@ package me.empty.service;
 
 import me.empty.objects.Quest;
 import me.empty.objects.Quest.Decision;
-import me.empty.objects.Quest.Option;
 import me.empty.repository.QuestRepository;
-
-import java.util.List;
 
 public class QuestService {
 

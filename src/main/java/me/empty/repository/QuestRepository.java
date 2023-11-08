@@ -2,6 +2,7 @@ package me.empty.repository;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import lombok.Getter;
 import lombok.SneakyThrows;
 import me.empty.objects.Quest;
 
@@ -10,6 +11,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.Type;
 
+@Getter
 public class QuestRepository {
 
     private final Quest quest;
@@ -32,9 +34,4 @@ public class QuestRepository {
             return gson.fromJson(reader, questMapType);
         }
     }
-
-    public Quest getQuest() {
-        return quest;
-    }
-
 }

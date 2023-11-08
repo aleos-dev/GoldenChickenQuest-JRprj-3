@@ -1,13 +1,12 @@
 package me.empty.service;
 
-import me.empty.objects.Quest;
 import me.empty.objects.Quest.Decision;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
 
-import static me.empty.objects.Quest.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static me.empty.objects.Quest.Option;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class QuestServiceTest {
 

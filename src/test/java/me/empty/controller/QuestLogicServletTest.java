@@ -60,7 +60,7 @@ class QuestLogicServletTest {
         when(request.getSession()).thenReturn(session);
         when(request.getParameter(OPTION_CHOISE_ATTRIBUTE_NAME)).thenReturn("0");
         when(session.getAttribute(QUEST_SERVICE_ATTRIBUTE_NAME)).thenReturn(service);
-        when(session.getAttribute(DECISION_ATTRIBUTE_NAME)).thenReturn((Object) "TestDecision");
+        when(session.getAttribute(DECISION_ATTRIBUTE_NAME)).thenReturn("TestDecision");
         when(service.getDecision(anyString())).thenReturn(decision);
     }
 
