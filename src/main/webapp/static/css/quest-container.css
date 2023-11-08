@@ -28,16 +28,15 @@
     max-width: 800px;
     margin: 0 auto; /* Centers the container */
     border-radius: 8px; /* Rounded corners for the container */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    box-shadow: 5px 5px 10px rgba(140, 140, 140, 0.1); /* Soft shadow for depth */
     padding: 10px;
     background-color: #fffaf0; /* Slight ivory color */
-    background-image: url('../images/mainBack.jpg'); /* Path to your image */
+    background-image: url('../images/mainBack.jpg');
     background-size: cover; /* Cover the entire area of the element */
     background-position: center center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    box-shadow: 5px 5px 10px #8c8c8c;
+    background-repeat: no-repeat;
     display: inline-block;
-    position: relative; /* Establishes a positioning context for pseudo-elements */
+    position: relative;
 }
 
 .quest-container::before {
@@ -58,8 +57,6 @@
     position: relative;
     z-index: 2;
 }
-
-
 
 .player-name {
     color: #2a9d8f; /* Give the player's name a unique color */

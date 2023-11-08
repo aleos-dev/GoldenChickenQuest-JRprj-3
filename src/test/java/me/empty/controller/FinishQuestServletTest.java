@@ -4,7 +4,6 @@ import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -27,10 +26,7 @@ class FinishQuestServletTest {
     @Mock
     private RequestDispatcher requestDispatcher;
 
-    @Mock
-    private HttpSession session;
-
-    private FinishQuestServlet servlet = new FinishQuestServlet();
+    private final FinishQuestServlet servlet = new FinishQuestServlet();
 
     @Test
     void doGet_ShouldDispatchRequestToFinishJSP() throws ServletException, IOException {

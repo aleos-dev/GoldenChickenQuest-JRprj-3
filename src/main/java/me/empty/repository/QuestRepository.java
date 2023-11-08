@@ -24,14 +24,16 @@ public class QuestRepository {
     private Quest loadQuestData(String path) {
         ClassLoader loader = getClass().getClassLoader();
 
-        try (InputStream inputStream = loader.getResourceAsStream(path);
-             Reader reader = new InputStreamReader(inputStream)) {
+        try (InputStream inputStream = loader.getResourceAsStream(path)) {
+            assert inputStream != null;
+            try (Reader reader = new InputStreamReader(inputStream)) {
 
-            Gson gson = new Gson();
-            Type questMapType = new TypeToken<Quest>() {
-            }.getType();
+                Gson gson = new Gson();
+                Type questMapType = new TypeToken<Quest>() {
+                }.getType();
 
-            return gson.fromJson(reader, questMapType);
+                return gson.fromJson(reader, questMapType);
+            }
         }
     }
 }
