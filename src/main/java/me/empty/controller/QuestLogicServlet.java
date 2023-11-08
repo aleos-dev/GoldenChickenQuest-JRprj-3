@@ -12,7 +12,6 @@ import me.empty.service.QuestService;
 import java.io.IOException;
 
 import static me.empty.objects.Quest.*;
-import static me.empty.objects.Quest.Decision;
 
 @WebServlet("/questLogic")
 public class QuestLogicServlet extends HttpServlet {

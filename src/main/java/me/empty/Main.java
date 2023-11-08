@@ -1,6 +1,5 @@
 package me.empty;
 
-import me.empty.repository.QuestRepository;
 import me.empty.service.QuestService;
 
 public class Main {
