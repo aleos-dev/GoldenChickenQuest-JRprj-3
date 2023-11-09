@@ -4,6 +4,7 @@ import me.empty.objects.Quest.Decision;
 import org.junit.jupiter.api.Test;
 
 import java.nio.file.Path;
+import java.util.List;
 
 import static me.empty.objects.Quest.Option;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,5 +44,29 @@ class QuestServiceTest {
 
         assertEquals(decisionPrompt, decision.prompt());
         assertEquals(optionTitle, option.title());
+    }
+
+
+    @Test
+    void getDecision_ShouldReturnRightDecision_WhenUseKey() {
+        String decisionPrompt = "Where will you start your investigation?";
+        String optionTitle = "The Blacksmith's Forge";
+        String key = "root";
+
+        Decision decision = service.getDecision(key);
+        Option option = decision.options().get(1);
+
+        assertEquals(decisionPrompt, decision.prompt());
+        assertEquals(optionTitle, option.title());
+    }
+
+    @Test
+    void getOptions_ShouldReturnList_ForGivenDecisionKey() {
+        String key = "root";
+        String optionTitle = "The Blacksmith's Forge";
+
+        List<Option> options = service.getOptions(key);
+
+        assertEquals(optionTitle, options.get(1).title());
     }
 }
