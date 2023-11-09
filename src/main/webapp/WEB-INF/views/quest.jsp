@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/body.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/content.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/quest-container.css">
+    <script src="${pageContext.request.contextPath}/static/js/quest.js"></script>
 </head>
 <body>
 <div class="content">
-    <div class="quest-container">
+
+    <div class="quest-container" data-title="${decision}">
 
         <div class="story-section">
             <h2><c:out value="${title}"/></h2>
@@ -33,6 +35,7 @@
 
             <c:forEach var="option" items="${questService.getOptions(sessionScope.decision)}"
                        varStatus="status">
+
                 <div class="path" id="${questService.getNextKey(option)}">
                     <h2><c:out value="${questService.getTitle(option)}"/></h2>
                     <p><c:out value="${questService.getStory(option)}"/></p>
@@ -50,6 +53,8 @@
         </button>
     </div>
 </div>
+<script
 
 </body>
+
 </html>
