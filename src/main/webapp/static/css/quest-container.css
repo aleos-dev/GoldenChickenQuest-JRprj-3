@@ -31,7 +31,6 @@
     box-shadow: 5px 5px 10px rgba(140, 140, 140, 0.1); /* Soft shadow for depth */
     padding: 10px;
     background-color: #fffaf0; /* Slight ivory color */
-    background-image: url('../images/mainBack.jpg');
     background-size: cover; /* Cover the entire area of the element */
     background-position: center center; /* Center the background image */
     background-repeat: no-repeat;
