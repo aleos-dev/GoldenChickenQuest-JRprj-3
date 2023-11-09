@@ -1,16 +1,19 @@
-FROM maven:3.8.4-openjdk-21 AS dependencies
-WORKDIR /app
-COPY pom.xml .
-RUN mvn dependency:go-offline
+# Use a base image with Java (choose the one that matches your application's requirements)
+FROM openjdk:21-jdk
 
-FROM maven:3.8.4-openjdk-21 AS build
+# Optional: Set a working directory
 WORKDIR /app
-COPY . .
-COPY --from=dependencies /root/.m2 /root/.m2
-RUN mvn clean install
 
-FROM tomcat:10-jdk21-openjdk-buster
-WORKDIR /usr/local/tomcat/webapps/
-COPY --from=build /app/target/GoldenChickenQuest.war ./ROOT.war
+# Copy the WAR file into the container image
+COPY ./target/GoldenChickenQuest.war /app/app.war
+
+# Use a suitable application server or servlet container, such as Tomcat, to run your WAR file
+# For example, using Tomcat:
+FROM tomcat:10
+COPY --from=build /app/app.war /usr/local/tomcat/webapps/
+
+# Expose the port your web app runs on
 EXPOSE 8080
-CMD ["catalina.sh", "jpda", "run"]
+
+# Start the web app
+CMD ["java", "-jar", "/app/app.war"]
