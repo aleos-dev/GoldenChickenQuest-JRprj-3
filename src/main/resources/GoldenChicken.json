@@ -247,6 +247,437 @@
           }
         ]
       },
+
+      "blacksmith-forge": {
+        "prompt": "The Blacksmith's Forge is as hot as the rumors about the missing trophy. What will you do?",
+        "options": [
+          {
+            "title": "Poke around the anvil",
+            "story": "You tap on the anvil with the shiny spoon. It rings out a note that makes the Blacksmith's parrot squawk, 'Cluck-buck-awk! Look under the rock!'",
+            "next": "anvil-clue"
+          },
+          {
+            "title": "Question the Blacksmith",
+            "story": "With a sly grin, the Blacksmith leans in, 'The trophy? Perhaps a trade. My spoon for... your boots? Just kidding. Or am I?'",
+            "next": "blacksmith-barter"
+          },
+          {
+            "title": "Inspect the bellows",
+            "story": "You squeeze the bellows and a cloud of soot poofs out, revealing a hidden compartment. Inside? More spoons. 'Collecting them for a giant's dinner party!' the Blacksmith chuckles.",
+            "next": "bellows-discovery"
+          }
+        ]
+      },
+      "anvil-clue": {
+        "prompt": "The anvil's tune has pointed you to a suspicious rock.",
+        "options": [
+          {
+            "title": "Lift the rock",
+            "story": "Heaving up the rock, you find a note: 'Beware, the trophy curse! P.S. This rock was heavy, wasn't it?'",
+            "next": "trophy-curse-warning"
+          }
+        ]
+      },
+      "blacksmith-barter": {
+        "prompt": "The Blacksmith's jesting offer hangs in the air, mixed with the heat of the forge.",
+        "options": [
+          {
+            "title": "Offer your boots",
+            "story": "You humor him and pretend to offer your boots. He winks and points to a pile of coal. 'Your real prize lies not in footwear, but under the soot!'",
+            "next": "coal-pile"
+          }
+        ]
+      },
+      "bellows-discovery": {
+        "prompt": "A trove of spoons, but no trophy. What now?",
+        "options": [
+          {
+            "title": "Ask about the giant",
+            "story": "The Blacksmith laughs, 'No giants here! But maybe one has taken the trophy? Giant steps lead to the forest!' he says, pointing outside.",
+            "next": "giant-steps"
+          }
+        ]
+      },
+      "trophy-curse-warning": {
+        "prompt": "A curse? That sounds serious, or maybe it's another jest?",
+        "options": [
+          {
+            "title": "Investigate the curse",
+            "story": "You read the note again and realize it's just a riddle. 'What has hands, but can't clap?' The answer? A clock. And what's that ticking sound from the shelf?",
+            "next": "riddle-clock"
+          }
+        ]
+      },
+      "coal-pile": {
+        "prompt": "A mountain of coal could hide anything. What will you find?",
+        "options": [
+          {
+            "title": "Dig through the coal",
+            "story": "As you dig, you uncover a metallic object. It's a... spoon? The Blacksmith roars with laughter. 'The trophy may not be here, but at least you have a souvenir!'",
+            "next": "souvenir-spoon"
+          }
+        ]
+      },
+      "giant-steps": {
+        "prompt": "The thought of a giant in the forest is as intriguing as it is frightening.",
+        "options": [
+          {
+            "title": "Follow the giant's trail",
+            "story": "You follow the oversized footprints leading to a clearing where a giant spoon sculpture stands. 'For the Giant Spoon Festival!' explains the Blacksmith, following you out.",
+            "next": "spoon-festival"
+          }
+        ]
+      },
+      "riddle-clock": {
+        "prompt": "The ticking leads you to a large grandfather clock.",
+        "options": [
+          {
+            "title": "Open the clock",
+            "story": "Inside the clock, you find a... chicken? 'I'm in hiding from the trophy thief!' it clucks. A new ally, or a poultry plot twist?",
+            "next": "clock-chicken"
+          }
+        ]
+      },
+      "souvenir-spoon": {
+        "prompt": "With a spoon in hand, you ponder your next move.",
+        "options": [
+          {
+            "title": "Keep the spoon",
+            "story": "It may not be the trophy, but it's a start. Who knows? Maybe there's a Spoon Cup Trophy in your future.",
+            "next": "spoon-trophy"
+          }
+        ]
+      },
+      "spoon-festival": {
+        "prompt": "The Spoon Festival is a spectacle of shiny sculptures.",
+        "options": [
+          {
+            "title": "Enjoy the festival",
+            "story": "Amidst the festivities, a spoon juggler tosses you a spoon. It's engraved with a map of the village. 'The trophy's location?' you wonder.",
+            "next": "map-spoon"
+          }
+        ]
+      },
+      "clock-chicken": {
+        "prompt": "A chicken in a clock is not something you see every day.",
+        "options": [
+          {
+            "title": "Interview the chicken",
+            "story": "The chicken squawks a tale of trophy envy and midnight escapades. 'Follow the feathers,' it clucks, pointing to a trail leading back to the village.",
+            "next": "feather-trail"
+          }
+        ]
+      },
+      "spoon-trophy": {
+        "prompt": "The Spoon Cup Trophy might just be the next best thing.",
+        "options": [
+          {
+            "title": "Start a new quest",
+            "story": "Why not? Trophies come in all shapes and sizes. Perhaps the village could use a bit of spoon-themed excitement!",
+            "next": "new-quest"
+          }
+        ]
+      },
+      "map-spoon": {
+        "prompt": "A map on a spoon? That's certainly novel.",
+        "options": [
+          {
+            "title": "Explore the map",
+            "story": "The map leads you through the village, past a series of spoon-themed clues, to the base of the statue of the village founder. Could the trophy be hidden in plain sight?",
+            "next": "statue-base"
+          }
+        ]
+      },
+      "feather-trail": {
+        "prompt": "Feathers on the ground... a breadcrumb trail of the bird variety.",
+        "options": [
+          {
+            "title": "Follow the feather trail",
+            "story": "The feathers lead you to a cozy nest atop the village flagpole. And nestled within? The missing trophy!",
+            "next": "trophy-nest"
+          }
+        ]
+      },
+      "new-quest": {
+        "prompt": "A quest for the Spoon Cup Trophy begins!",
+        "options": [
+          {
+            "title": "Announce the new quest",
+            "story": "The villagers rally to the idea, and soon the quest for spoons becomes the talk of the town. 'The Great Spoon Quest' they call it.",
+            "next": "spoon-quest-start"
+          }
+        ]
+      },
+      "statue-base": {
+        "prompt": "The village founder's statue is a historical landmark. Could it be the key?",
+        "options": [
+          {
+            "title": "Search the statue",
+            "story": "Hidden within a compartment in the base, you find not the trophy, but a smaller, spoon-shaped trophy! 'The Founder's Spoon'—a historical artifact!",
+            "next": "founders-spoon"
+          }
+        ]
+      },
+      "trophy-nest": {
+        "prompt": "Atop the flagpole, the trophy sits in the nest, almost as if it's guarding the village.",
+        "options": [
+          {
+            "title": "Retrieve the trophy",
+            "story": "With careful balance, you climb up and retrieve the trophy. The village cheers below, and the Chicken Cup Trophy is home once more.",
+            "next": "trophy-home"
+          }
+        ]
+      },
+      "spoon-quest-start": {
+        "prompt": "The Great Spoon Quest has captured everyone's imagination.",
+        "options": [
+          {
+            "title": "Plan the spoon hunt",
+            "story": "You set out rules and prizes, and the villagers set off with spoons in hand, eager for adventure.",
+            "next": "hunt-begins"
+          }
+        ]
+      },
+      "founders-spoon": {
+        "prompt": "The Founder's Spoon is a discovery of great importance.",
+        "options": [
+          {
+            "title": "Present the Founder's Spoon",
+            "story": "You present the spoon to the village council. They decree a new annual event: 'Founder's Day', with the spoon as the centerpiece.",
+            "next": "founders-day"
+          }
+        ]
+      },
+      "trophy-home": {
+        "prompt": "The trophy is safe, and the village can breathe easy once more.",
+        "options": [
+          {
+            "title": "Celebrate the return",
+            "story": "A party is thrown in your honor, and the Chicken Cup Trophy glistens under the sun, its adventure over—for now.",
+            "next": "party-time"
+          }
+        ]
+      },
+      "hunt-begins": {
+        "prompt": "The villagers are eager to find spoons of all shapes and sizes.",
+        "options": [
+          {
+            "title": "Lead the spoon hunt",
+            "story": "Armed with a map and a spirit of fun, you lead the villagers on a merry chase through haystacks and chicken coops in search of the shiniest spoons.",
+            "next": "spoon-hunt-success"
+          }
+        ]
+      },
+      "founders-day": {
+        "prompt": "Founder's Day is set to become a cherished annual tradition.",
+        "options": [
+          {
+            "title": "Organize the celebration",
+            "story": "You help organize the first Founder's Day, complete with spoon-themed games and a historical spoon exhibit, celebrating the village's rich history.",
+            "next": "founders-day-success"
+          }
+        ]
+      },
+      "party-time": {
+        "prompt": "The village square is alive with music and laughter.",
+        "options": [
+          {
+            "title": "Join the festivities",
+            "story": "You take a well-deserved break, joining in the dancing and feasting, your heart as full as your belly.",
+            "next": "party-success"
+          }
+        ]
+      },
+      "spoon-hunt-success": {
+        "prompt": "The spoon hunt is a resounding success with a surprising twist.",
+        "options": [
+          {
+            "title": "Award the prizes",
+            "story": "The biggest surprise? Every spoon in the hunt turns out to be a miniature trophy! The villagers cheer, delighted by the unexpected twist.",
+            "next": "end"
+          }
+        ]
+      },
+      "founders-day-success": {
+        "prompt": "Founder's Day is a hit, with villagers and visitors alike.",
+        "options": [
+          {
+            "title": "Give a Founder's Day speech",
+            "story": "As the guest of honor, you give a speech about the village's unity and strength, symbolized by the Founder's Spoon.",
+            "next": "end"
+          }
+        ]
+      },
+      "party-success": {
+        "prompt": "As the night draws to a close, you reflect on the journey.",
+        "options": [
+          {
+            "title": "Share stories of the quest",
+            "story": "Gathered around a fire, villagers listen intently as you recount the tale of the Chicken Cup Trophy's disappearance and return.",
+            "next": "end"
+          }
+        ]
+      },
+      "mysterious-forest": {
+        "prompt": "The forest whispers secrets and the trees seem to watch with a curious intent. What's your next step?",
+        "options": [
+          {
+            "title": "Talk to the Wise Old Tree",
+            "story": "You approach a tree that's rumored to be the oldest in the forest. It doesn't talk back, but a squirrel chatters, 'Acorn!' and drops one on your head. Inside the acorn? A tiny map.",
+            "next": "wise-tree-map"
+          },
+          {
+            "title": "Follow the Shiny Trail",
+            "story": "You follow a trail of shiny objects. They turn out to be forest critters' collection of shiny candy wrappers. 'Trade you a wrapper for a story?' one critter offers.",
+            "next": "shiny-trail"
+          },
+          {
+            "title": "Investigate the Glowing Pond",
+            "story": "At the pond, the water glows eerily. 'It's the algae,' a frog croaks. 'They love disco.' Suddenly, a disco ball emerges from the water.",
+            "next": "glowing-pond"
+          }
+        ]
+      },
+      "wise-tree-map": {
+        "prompt": "The tiny map leads to a series of riddles.",
+        "options": [
+          {
+            "title": "Solve the riddles",
+            "story": "Each riddle takes you deeper into the forest, until you reach a clearing where the trees form a smiley face. 'The treasure is happiness!' a note says. Well, you're smiling!",
+            "next": "riddle-solution"
+          }
+        ]
+      },
+      "shiny-trail": {
+        "prompt": "The critters' stories are as shiny as their treasures.",
+        "options": [
+          {
+            "title": "Listen to the critter's story",
+            "story": "A raccoon tells you a tall tale of a shiny cup that granted wishes. 'But it wished itself away! Oh, the irony!' it laughs.",
+            "next": "critter-story"
+          }
+        ]
+      },
+      "glowing-pond": {
+        "prompt": "The disco ball at the pond pulsates with a funky beat.",
+        "options": [
+          {
+            "title": "Dance with the algae",
+            "story": "You start dancing, and so do the forest animals. It's a forest disco! In the midst of the boogie, a fish flips a shiny coin at you. 'For luck!' it bubbles.",
+            "next": "disco-dance"
+          }
+        ]
+      },
+      "riddle-solution": {
+        "prompt": "Happiness is great, but where's that trophy?",
+        "options": [
+          {
+            "title": "Search the happy clearing",
+            "story": "You look around and find a laughing hyena. 'The trophy?' it gasps between laughs. 'Follow the giggles!' And so, you listen for laughter...",
+            "next": "hyena-hint"
+          }
+        ]
+      },
+      "critter-story": {
+        "prompt": "The raccoon's story gives you an idea.",
+        "options": [
+          {
+            "title": "Wish for a clue",
+            "story": "You close your eyes and wish. When you open them, a trail of feathers leads away. 'Thanks, shiny cup!' you shout and follow the trail.",
+            "next": "feather-trail-forest"
+          }
+        ]
+      },
+      "disco-dance": {
+        "prompt": "The coin is not a trophy, but it's a clue.",
+        "options": [
+          {
+            "title": "Use the coin",
+            "story": "You flip the coin, and it lands pointing to a bush. Behind it is a disco ball. 'Not the trophy, but keep it!' the frog insists. It'll make a great story.",
+            "next": "disco-ball-find"
+          }
+        ]
+      },
+      "hyena-hint": {
+        "prompt": "The giggles lead to a peculiar scene.",
+        "options": [
+          {
+            "title": "Explore the source of giggles",
+            "story": "You find a circle of mushrooms where the fairies are having a laugh. 'We've been pranking the trophy!' one confesses. 'It's under the leaf pile.'",
+            "next": "fairy-prank"
+          }
+        ]
+      },
+      "feather-trail-forest": {
+        "prompt": "The feather trail is curious and winding.",
+        "options": [
+          {
+            "title": "Follow the feathers",
+            "story": "The feathers lead to a peacock who's admiring its own reflection. 'Lost something?' it asks. 'Try the mirror pond.'",
+            "next": "mirror-pond"
+          }
+        ]
+      },
+      "disco-ball-find": {
+        "prompt": "A disco ball in a bush is an odd find.",
+        "options": [
+          {
+            "title": "Keep the disco ball",
+            "story": "You take the disco ball. It's not the trophy, but at the victory party, it'll be the centerpiece!",
+            "next": "disco-party-prep"
+          }
+        ]
+      },
+      "fairy-prank": {
+        "prompt": "Under the leaf pile, you find something.",
+        "options": [
+          {
+            "title": "Uncover the trophy",
+            "story": "You dig through the leaves and there it is: the Chicken Cup Trophy, laughing? A laughter spell! The fairies help you lift the spell and the trophy is silent once more.",
+            "next": "trophy-laughter-lifted"
+          }
+        ]
+      },
+      "mirror-pond": {
+        "prompt": "The Mirror Pond is clear and still.",
+        "options": [
+          {
+            "title": "Search the pond",
+            "story": "In the pond's reflection, you see the trophy sitting high in a tree. 'Reflected victory!' you exclaim and climb up to retrieve it.",
+            "next": "reflected-trophy"
+          }
+        ]
+      },
+      "disco-party-prep": {
+        "prompt": "You're ready to throw the best victory disco party.",
+        "options": [
+          {
+            "title": "Plan the party",
+            "story": "The villagers don their best disco outfits, and the night is alive with music, lights, and laughter, a fitting end to an odd quest.",
+            "next": "end"
+          }
+        ]
+      },
+      "trophy-laughter-lifted": {
+        "prompt": "The trophy is silent, but the quest is loud with joy.",
+        "options": [
+          {
+            "title": "Return with the trophy",
+            "story": "You bring the trophy back to the village, where the fairies' laughter becomes a tale told with mirth and cheer.",
+            "next": "end"
+          }
+        ]
+      },
+      "reflected-trophy": {
+        "prompt": "The trophy was in the tree all along, just waiting.",
+        "options": [
+          {
+            "title": "Bring the trophy down",
+            "story": "You carefully climb down with the trophy. The forest seems to sigh with relief, and even the trees seem to be clapping their leaves.",
+            "next": "end"
+          }
+        ]
+      },
       "end": {
         "prompt": "The adventure concludes with the village stronger and more united than ever, the trophy shining brightly, symbolizing not just victory, but the heart of the community."
       }
