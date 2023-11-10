@@ -5,7 +5,7 @@
   Time: 2:12 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,23 +16,17 @@
 </head>
 <body>
 
-<div class="finish-container">
+<div class="finish-container" style="background-image: url('${pageContext.request.contextPath}/static/images/finish.jpg');">
     <h1 class="finish-header">Congratulations!</h1>
     <p class="finish-message">
-        You've successfully completed the process. We appreciate your effort.
+        You've successfully completed the quest.
     </p>
-    <%-- You might want to include dynamic data here, for example: --%>
-    <p class="finish-message">
-        Your score is: <%= request.getAttribute("score") %>
-    </p>
-    <%-- Replace "score" with the actual attribute you are passing to the JSP --%>
-    <button id="finishButton" class="finish-button" onclick="location.href='index.jsp';">Go Home</button>
-    <div class="finish-image">
-        <img src="../images/finish.jpg" alt="Finish Celebration" />
-    </div>
-</div>
 
-<script src="scripts/finish.js"></script> <!-- If you have any JavaScript -->
+    <p class="finish-message">
+        Your score is: excellent
+    </p>
+    <button id="finishButton" class="finish-button" onclick="location.href='index.jsp';">Go Start Page</button>
+</div>
 
 </body>
 </html>

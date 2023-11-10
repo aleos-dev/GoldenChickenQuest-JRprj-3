@@ -40,6 +40,7 @@
                     <p><c:out value="${questService.getStory(option)}"/></p>
                     <form action="questLogic" method="post">
                         <input type="hidden" name="choiceIndex" value="${status.index}">
+                        <input type="hidden" name="choiceContext" value="${decision}">
                         <button type="submit"><c:out
                                 value="${questService.getTitle(option)}"/></button>
                     </form>

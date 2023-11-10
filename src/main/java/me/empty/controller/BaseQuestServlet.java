@@ -15,7 +15,8 @@ public abstract class BaseQuestServlet extends HttpServlet {
 
     protected static final String QUEST_SERVICE_ATTRIBUTE_NAME = "questService";
     protected static final String DECISION_ATTRIBUTE_NAME = "decision";
-    protected static final String OPTION_CHOICE_ATTRIBUTE_NAME = "choiceIndex";
+    protected static final String OPTION_CHOICE_PARAMETER_NAME = "choiceIndex";
+    protected static final String CHOICE_CONTEXT_PARAMETER_NAME = "choiceContext";
     protected static final String TITLE_ATTRIBUTE_NAME = "title";
     protected static final String STORY_ATTRIBUTE_NAME = "story";
     protected static final String QUEST_END_ATTRIBUTE_NAME = "end";
