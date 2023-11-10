@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpSession;
 import me.empty.service.QuestService;
 
 import java.io.IOException;
-import java.util.Optional;
 
 @WebServlet("/initQuest")
 public class InitQuestServlet extends BaseQuestServlet {
