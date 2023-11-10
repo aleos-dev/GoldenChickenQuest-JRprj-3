@@ -9,8 +9,10 @@ import jakarta.servlet.http.HttpSession;
 import me.empty.service.QuestService;
 
 import java.io.IOException;
+import java.util.Objects;
 
-import static me.empty.objects.Quest.*;
+import static me.empty.objects.Quest.Decision;
+import static me.empty.objects.Quest.Option;
 
 @WebServlet("/questLogic")
 public class QuestLogicServlet extends BaseQuestServlet {
@@ -19,7 +21,7 @@ public class QuestLogicServlet extends BaseQuestServlet {
         HttpSession session = req.getSession();
 
         QuestService service = getQuestServiceFromSession(session);
-        Decision decision = getCurrentDecisionAndDefineBackground(session, service);
+        Decision decision = getCurrentDecision(req, service);
 
         Option option = getSelectedOption(req, decision);
 
@@ -31,14 +33,17 @@ public class QuestLogicServlet extends BaseQuestServlet {
         return (QuestService) session.getAttribute(QUEST_SERVICE_ATTRIBUTE_NAME);
     }
 
-    private Decision getCurrentDecisionAndDefineBackground(HttpSession session, QuestService service) {
-        String decisionKey = (String) session.getAttribute(DECISION_ATTRIBUTE_NAME);
+    private Decision getCurrentDecision(HttpServletRequest req, QuestService service) {
+        String decisionKey = req.getParameter(CHOICE_CONTEXT_PARAMETER_NAME);
+        System.out.println(decisionKey);
 
-        return service.getDecision(decisionKey);
+        return Objects.isNull(decisionKey)
+                ? service.getDecision(DEFAULT_DECISION)
+                : service.getDecision(decisionKey);
     }
 
     private Option getSelectedOption(HttpServletRequest req, Decision decision) {
-        int choice = Integer.parseInt(req.getParameter(OPTION_CHOICE_ATTRIBUTE_NAME));
+        int choice = Integer.parseInt(req.getParameter(OPTION_CHOICE_PARAMETER_NAME));
         return decision.options().get(choice);
     }
 
