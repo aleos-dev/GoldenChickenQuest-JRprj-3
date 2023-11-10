@@ -1,12 +1,25 @@
-/* Finish Page Styles */
-.finish-container {
-    text-align: center; /* Centers the content */
-    padding: 50px 20px;
-    background: #f8f9fa; /* Light background color */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+.finish-container {
+    width: 100vw; /* Set width to 100% of the viewport width */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    background-color: #fffaf0; /* Slight ivory color */
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Adjust other elements as needed */
 .finish-header {
-    color: #333; /* Darker font color for contrast */
+    color: #333;
     font-size: 2.5em;
     margin-bottom: 30px;
 }
@@ -18,10 +31,17 @@
     line-height: 1.6;
 }
 
+.finish-header, .finish-message {
+    background-color: rgba(255, 255, 255, 0.7); /* White background with some transparency */
+    display: inline-block; /* Make the background only as wide as the text */
+    margin: 10px; /* Add some margin around the text */
+    padding: 5px 10px; /* Add some padding for better visibility */
+}
+
 .finish-button {
     padding: 12px 30px;
     font-size: 1em;
-    background-color: #28a745; /* Success green color */
+    background-color: #28a745;
     color: white;
     border: none;
     cursor: pointer;
@@ -31,21 +51,11 @@
 }
 
 .finish-button:hover {
-    background-color: #218838; /* A darker green on hover */
-    transform: translateY(-3px); /* Moves button up slightly */
+    background-color: #218838;
+    transform: translateY(-3px);
 }
 
-.finish-image {
-    max-width: 100%;
-    height: auto;
-    padding: 20px;
-}
-
-/* If there is a specific ID or class you want styled, include it here */
 #finishButton {
-    position: relative; /* Adjust as needed */
+    position: relative;
     transition: transform 0.3s;
 }
-
-/* Add any additional specific styles below */
-/* ... */
