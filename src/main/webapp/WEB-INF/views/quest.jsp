@@ -17,12 +17,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/body.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/content.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/quest-container.css">
-    <script src="${pageContext.request.contextPath}/static/js/quest.js"></script>
 </head>
 <body>
 <div class="content">
-
-    <div class="quest-container" data-title="${decision}">
+    <div class="quest-container"
+         style="background-image: url('${pageContext.request.contextPath}/static/images/${questContainerBackground}');">
 
         <div class="story-section">
             <h2><c:out value="${title}"/></h2>
@@ -53,7 +52,5 @@
         </button>
     </div>
 </div>
-
 </body>
-
 </html>

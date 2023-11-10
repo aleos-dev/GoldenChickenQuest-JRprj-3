@@ -1,11 +1,15 @@
 package me.empty.service;
 
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.http.HttpSession;
 import me.empty.objects.Quest;
 import me.empty.objects.Quest.Decision;
 import me.empty.objects.Quest.Option;
 import me.empty.repository.QuestRepository;
 
+import java.io.File;
 import java.util.List;
+import java.util.Optional;
 
 public class QuestService {
 
@@ -50,5 +54,18 @@ public class QuestService {
 
     public String getNextKey(Option option) {
         return option.next();
+    }
+
+    public Optional<String> getNameForBackgroundImage(String decision, ServletContext context) {
+        String fileName = decision + ".jpg";
+        String imagePathDir = "/static/images/";
+        String newBackgroundPath = context.getRealPath(imagePathDir + fileName);
+
+        File file = new File(newBackgroundPath);
+        if (file.exists()) {
+            return Optional.of(fileName);
+        }
+
+        return Optional.empty();
     }
 }
