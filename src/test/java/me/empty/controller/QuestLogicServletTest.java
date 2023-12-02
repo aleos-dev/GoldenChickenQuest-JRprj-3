@@ -1,6 +1,7 @@
 package me.empty.controller;
 
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -72,7 +73,7 @@ class QuestLogicServletTest {
         when(request.getSession()).thenReturn(session);
         when(request.getParameter(OPTION_CHOISE_ATTRIBUTE_NAME)).thenReturn("0");
         when(request.getParameter(CHOICE_CONTEXT_PARAMETER_NAME)).thenReturn(null);
-        when(session.getAttribute(DECISION_ATTRIBUTE_NAME)).thenReturn("TestDecision");
+        when(session.getAttribute(QUEST_SERVICE_ATTRIBUTE_NAME)).thenReturn(service);
         when(service.getDecision(anyString())).thenReturn(decision);
     }
 
