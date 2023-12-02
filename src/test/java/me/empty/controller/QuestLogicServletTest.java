@@ -31,6 +31,7 @@ class QuestLogicServletTest {
     public static final String QUEST_SERVICE_ATTRIBUTE_NAME = "questService";
     public static final String DECISION_ATTRIBUTE_NAME = "decision";
     public static final String OPTION_CHOISE_ATTRIBUTE_NAME = "choiceIndex";
+    public static final String CHOICE_CONTEXT_PARAMETER_NAME = "choiceContext";
     public static final String TITLE_ATTRIBUTE_NAME = "title";
     public static final String STORY_ATTRIBUTE_NAME = "story";
     public static final String QUEST_END_ATTRIBUTE_NAME = "end";
@@ -45,6 +46,8 @@ class QuestLogicServletTest {
     HttpSession session;
     @Mock
     QuestService service;
+    @Mock
+    ServletContext context;
 
     @InjectMocks
     private QuestLogicServlet servlet;
@@ -56,10 +59,19 @@ class QuestLogicServletTest {
 
     @BeforeEach
     void setUp() {
-        servlet = new QuestLogicServlet();
+        servlet = new QuestLogicServlet() {
+            @Override
+            protected void defineBackgroundImage(HttpSession session, QuestService service, ServletContext context) {
+            }
+
+            @Override
+            public ServletContext getServletContext() {
+                return context;
+            }
+        };
         when(request.getSession()).thenReturn(session);
         when(request.getParameter(OPTION_CHOISE_ATTRIBUTE_NAME)).thenReturn("0");
-        when(session.getAttribute(QUEST_SERVICE_ATTRIBUTE_NAME)).thenReturn(service);
+        when(request.getParameter(CHOICE_CONTEXT_PARAMETER_NAME)).thenReturn(null);
         when(session.getAttribute(DECISION_ATTRIBUTE_NAME)).thenReturn("TestDecision");
         when(service.getDecision(anyString())).thenReturn(decision);
     }
