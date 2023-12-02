@@ -26,6 +26,8 @@ class InitQuestServletTest {
     @Mock private RequestDispatcher requestDispatcher;
 
     @Mock private HttpSession session;
+    
+    @Mock private ServletContext context;
 
 
     private InitQuestServlet servlet;
@@ -35,7 +37,16 @@ class InitQuestServletTest {
         when(request.getSession()).thenReturn(session);
         when(request.getRequestDispatcher("/WEB-INF/views/quest.jsp")).thenReturn(requestDispatcher);
 
-        servlet = new InitQuestServlet();
+        servlet = new InitQuestServlet() {
+            @Override
+            protected void defineBackgroundImage(HttpSession session, QuestService service, ServletContext context) {
+            }
+
+            @Override
+            public ServletContext getServletContext() {
+                return context;
+            }
+        };
     }
 
     @Test
